@@ -27,7 +27,7 @@ namespace Institution
 
         private void Add_Load(object sender, EventArgs e)
         {
-            
+
         }
 
         private void label4_Click(object sender, EventArgs e)
@@ -43,6 +43,7 @@ namespace Institution
         private void radioButton1_CheckedChanged(object sender, EventArgs e)
         {
             label3.Text = "Заполняем данные для студента";
+            label7.Text = "студенту";
             label10.Text = "учёбы";
             label11.Text = "учёбы";
         }
@@ -50,6 +51,7 @@ namespace Institution
         private void radioButton4_CheckedChanged(object sender, EventArgs e)
         {
             label3.Text = "Заполняем данные для преподавателя";
+            label7.Text = "преподавателю";
             label10.Text = "работы";
             label11.Text = "работы не определена";
         }
@@ -72,7 +74,7 @@ namespace Institution
 
         private void button1_Click(object sender, EventArgs e)
         {
-            
+
         }
     }
 }

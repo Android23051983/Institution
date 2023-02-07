@@ -39,8 +39,8 @@
             this.label4 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
-            this.radioButton4 = new System.Windows.Forms.RadioButton();
             this.radioButton3 = new System.Windows.Forms.RadioButton();
+            this.radioButton4 = new System.Windows.Forms.RadioButton();
             this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.SuspendLayout();
@@ -140,27 +140,27 @@
             this.label5.Text = "Нет информации для поиска?";
             this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
-            // radioButton4
-            // 
-            this.radioButton4.AutoSize = true;
-            this.radioButton4.Location = new System.Drawing.Point(246, 122);
-            this.radioButton4.Name = "radioButton4";
-            this.radioButton4.Size = new System.Drawing.Size(109, 19);
-            this.radioButton4.TabIndex = 21;
-            this.radioButton4.TabStop = true;
-            this.radioButton4.Text = "Преподаватель";
-            this.radioButton4.UseVisualStyleBackColor = true;
-            // 
             // radioButton3
             // 
             this.radioButton3.AutoSize = true;
-            this.radioButton3.Location = new System.Drawing.Point(246, 147);
+            this.radioButton3.Location = new System.Drawing.Point(246, 122);
             this.radioButton3.Name = "radioButton3";
-            this.radioButton3.Size = new System.Drawing.Size(192, 19);
-            this.radioButton3.TabIndex = 20;
+            this.radioButton3.Size = new System.Drawing.Size(109, 19);
+            this.radioButton3.TabIndex = 21;
             this.radioButton3.TabStop = true;
-            this.radioButton3.Text = "Младший научный сотрудник";
+            this.radioButton3.Text = "Преподаватель";
             this.radioButton3.UseVisualStyleBackColor = true;
+            // 
+            // radioButton4
+            // 
+            this.radioButton4.AutoSize = true;
+            this.radioButton4.Location = new System.Drawing.Point(246, 147);
+            this.radioButton4.Name = "radioButton4";
+            this.radioButton4.Size = new System.Drawing.Size(192, 19);
+            this.radioButton4.TabIndex = 20;
+            this.radioButton4.TabStop = true;
+            this.radioButton4.Text = "Младший научный сотрудник";
+            this.radioButton4.UseVisualStyleBackColor = true;
             // 
             // radioButton2
             // 
@@ -188,8 +188,8 @@
             // 
             this.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.ClientSize = new System.Drawing.Size(438, 320);
-            this.Controls.Add(this.radioButton4);
             this.Controls.Add(this.radioButton3);
+            this.Controls.Add(this.radioButton4);
             this.Controls.Add(this.radioButton2);
             this.Controls.Add(this.radioButton1);
             this.Controls.Add(this.label5);
@@ -221,8 +221,8 @@
         private Button button2;
         private Label label5;
         public RichTextBox richTextBox2;
-        private RadioButton radioButton4;
         private RadioButton radioButton3;
+        private RadioButton radioButton4;
         private RadioButton radioButton2;
         private RadioButton radioButton1;
     }

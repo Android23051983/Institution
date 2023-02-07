@@ -32,9 +32,24 @@ namespace Institution
 
         private void button2_Click(object sender, EventArgs e)
         {
-            foreach (Student item in students)
-            this.richTextBox2.Text += item.Show();
-
+            if (this.radioButton1.Checked)
+            {
+                this.richTextBox2.Clear();
+                foreach (Student item in students)
+                    this.richTextBox2.Text += item.Show();
+            }
+            else if (this.radioButton2.Checked)
+            {
+                this.richTextBox2.Text = "Специалисты";
+            }
+            else if (this.radioButton3.Checked)
+            {
+                this.richTextBox2.Text = "Преподователи";
+            }
+            else if(this.radioButton4.Checked)
+            {
+                this.richTextBox2.Text = "Младшие научные сотрудники";
+            }
         }
 
         private void label5_Click(object sender, EventArgs e)

@@ -3,13 +3,16 @@ namespace Institution
 {
     public partial class Form1 : Form
     {
+        Student[] students = {
+           new Student("Андрей", "Щербаков",
+           new DateTime(1983, 5, 23), "Академия ТОР", "СПУ221"),
+           new Student("Андрей", "Комиссаров",
+           new DateTime(1993, 7, 12), "академия ТОР", "СПУ221")
+        };
+
         public Form1()
         {
             InitializeComponent();
-            Student student =
-            new Student("Андрей", "Щербаков",
-            new DateTime(1983, 5, 23), "Академия ТОР", "СПУ221");
-            this.richTextBox2.Text = student.Show();
         }
 
         private void label2_Click(object sender, EventArgs e)
@@ -29,7 +32,8 @@ namespace Institution
 
         private void button2_Click(object sender, EventArgs e)
         {
-
+            foreach (Student item in students)
+            this.richTextBox2.Text += item.Show();
 
         }
 
@@ -82,7 +86,7 @@ class Student : Human
     }
     public string Show()
     {
-        return $"Фамилия: {_lastName} \nИмя: {_firstName} \nДата рождения: {_birthDate.ToShortDateString()} \nУчусь в {_institution},группа {_groupName}";
+        return $"Фамилия: {_lastName} \nИмя: {_firstName} \nДата рождения: {_birthDate.ToShortDateString()} \nУчусь в {_institution},группа {_groupName}\n\n";
     }
 
 }

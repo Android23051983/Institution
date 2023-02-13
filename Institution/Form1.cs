@@ -3,12 +3,12 @@ namespace Institution
 {
     public partial class Form1 : Form
     {
-        Student[] students = {
-           new Student("Андрей", "Щербаков",
-           new DateTime(1983, 5, 23), "Академия ТОР", "СПУ221", "Разработка программного обеспечения"),
-           new Student("Андрей", "Комиссаров",
-           new DateTime(1993, 7, 12), "академия ТОР", "СПУ221", "Разработка программного обеспечения")
-        };
+        //Student[] students = {
+        //   new Student("Андрей", "Щербаков",
+        //   new DateTime(1983, 5, 23), "Академия ТОР", "СПУ221", "Разработка программного обеспечения"),
+        //   new Student("Андрей", "Комиссаров",
+        //   new DateTime(1993, 7, 12), "академия ТОР", "СПУ221", "Разработка программного обеспечения")
+        //};
 
         public Form1()
         {
@@ -34,9 +34,11 @@ namespace Institution
         {
             if (this.radioButton1.Checked)
             {
+                //StudentsAdd stdAdd = new StudentsAdd();
                 this.richTextBox2.Clear();
-                foreach (Student item in students)
-                    this.richTextBox2.Text += item.Show();
+
+                for (int i = 0; i < StudentsAdd.students.Length; i++)
+                    this.richTextBox2.Text += StudentsAdd.students[i].ToString();
             }
             else if (this.radioButton2.Checked)
             {
@@ -44,7 +46,7 @@ namespace Institution
             }
             else if (this.radioButton3.Checked)
             {
-                this.richTextBox2.Text = "Преподователи";
+                this.richTextBox2.Text = "Преподаватели";
             }
             else if (this.radioButton4.Checked)
             {
@@ -55,7 +57,7 @@ namespace Institution
         private void label5_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Add add = new Add();
+            Add add = new Add(this);
             add.Show();
         }
 

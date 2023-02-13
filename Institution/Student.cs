@@ -16,11 +16,19 @@ namespace Institution
             _institution = institution;
             _groupName = gName;
             _specialization = specialization;
+        } 
+        public Student(string fName, string lName, string sName, DateTime date, string institution, string gName, string specialization) : base(fName, lName, sName, date)
+        {
+            _institution = institution;
+            _groupName = gName;
+            _specialization = specialization;
         }
-        public string Show()
+
+        public Student() { }
+        public override string ToString()
         {
             
-            return $"Фамилия: {_lastName} \nИмя: {_firstName} \nОтчество: {_secondName}\nДата рождения: {_birthDate.ToShortDateString()} \nУчусь в: {_institution}\nГруппа: {_groupName}\nСпециализация: {_specialization} \n\n";
+            return $"{base.ToString()} \nУчусь в: {_institution}\nГруппа: {_groupName}\nСпециализация: {_specialization} \n\n";
         }
     }
 }

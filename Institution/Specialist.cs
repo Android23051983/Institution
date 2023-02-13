@@ -14,9 +14,9 @@ namespace Institution
             _qualification = qualification;
         }
 
-        public string Show()
+        public override string ToString()
         {
-            return $"Фамилия: {_lastName} \nИмя: {_firstName} \nДата рождения: {_birthDate.ToShortDateString()} \nУчусь в {_institution},группа {_groupName}, Квалификация: {_qualification}\n\n";
+            return $"{base.ToString()}\nКвалификация: {_qualification}\n\n";
         }
     }
 }

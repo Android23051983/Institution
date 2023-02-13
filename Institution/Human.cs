@@ -29,12 +29,13 @@ namespace Institution
             _secondName = sName;
             _birthDate = date;
         }
+        public Human() { }
 
         //Form1 form1 = Application.OpenForms[0] as Form1;
-        public string Show()
+        public override string ToString()
         {
 
-            return $"\nФамилия: {_lastName} \nИмя: {_firstName} \nДата рождения: {_birthDate.ToShortDateString()}";
+            return $"\nФамилия: {_lastName} \nИмя: {_firstName} \nОтчество: {_secondName}\nДата рождения: {_birthDate.ToShortDateString()}";
         }
     }
 }

@@ -18,6 +18,11 @@ namespace Institution
             InitializeComponent();
         }
 
+        public Add(Form1 f)
+        {
+            InitializeComponent();
+        }
+
         private void Add_FormClosed(object sender, FormClosedEventArgs e)
         {
             this.Hide();
@@ -53,7 +58,7 @@ namespace Institution
             label3.Text = "Заполняем данные для преподавателя";
             label7.Text = "преподавателю";
             label10.Text = "работы";
-            label11.Text = "работы не определена";
+            label11.Text = "работы";
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -64,17 +69,59 @@ namespace Institution
         private void radioButton2_CheckedChanged(object sender, EventArgs e)
         {
             label3.Text = "Заполняем данные для специалиста";
+            label7.Text = "специалисту";
+            label10.Text = "работы";
+            label11.Text = "работы";
         }
 
         private void radioButton3_CheckedChanged(object sender, EventArgs e)
         {
             label3.Text = "Заполняем данные для младшего научного сотрудника";
-
+            label7.Text = "младшему научному сотруднику";
+            label10.Text = "работы";
+            label11.Text = "работы";
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
+            //StudentsAdd.StudentAdd("Сергей", "Сизов", new DateTime(1989, 8, 2), "Академия ТОР", "СПУ221", "Разработка программного обеспечения");
+            string? RadioText = "";
+           
+            if (radioButton1.Checked)
+            {
+                RadioText = radioButton1.Text;
+            }
+            else if (radioButton2.Checked)
+            {
+                RadioText = radioButton2.Text;
+            }
+            else if (radioButton3.Checked)
+            {
+                RadioText = radioButton3.Text;
+            }
+            else if (radioButton4.Checked)
+            {
+                RadioText = radioButton4.Text;
+            }
 
+            string? CheckText = "";
+            if (checkBox1.Checked)
+            {
+                CheckText = checkBox1.Text;
+            }
+            else if (checkBox2.Checked)
+            {
+                CheckText = checkBox2.Text;
+            }
+            else if (checkBox3.Checked)
+            {
+                CheckText = checkBox3.Text;
+            }
+            else if (checkBox4.Checked)
+            {
+                CheckText = checkBox4.Text;
+            }
+            StudentsAdd.StudentAdd(lNameTextBox.Text, fNameTextBox.Text, dateTimePicker1.Value, InstitutionTextBox.Text, CheckText, RadioText);
         }
     }
 }

@@ -3,13 +3,6 @@ namespace Institution
 {
     public partial class Form1 : Form
     {
-        //Student[] students = {
-        //   new Student("Андрей", "Щербаков",
-        //   new DateTime(1983, 5, 23), "Академия ТОР", "СПУ221", "Разработка программного обеспечения"),
-        //   new Student("Андрей", "Комиссаров",
-        //   new DateTime(1993, 7, 12), "академия ТОР", "СПУ221", "Разработка программного обеспечения")
-        //};
-
         public Form1()
         {
             InitializeComponent();
@@ -42,7 +35,9 @@ namespace Institution
             }
             else if (this.radioButton2.Checked)
             {
-                this.richTextBox2.Text = "Специалисты";
+                this.richTextBox2.Clear();
+                for (int i = 0; i < SpecialistsAdd.specialists.Length; i++)
+                    this.richTextBox2.Text += SpecialistsAdd.specialists[i].ToString();
             }
             else if (this.radioButton3.Checked)
             {
@@ -73,47 +68,3 @@ namespace Institution
         }
     }
 }
-//class Human
-//{
-//    protected string _firstName;
-//    protected string _lastName;
-//    protected string _secondName;
-//    protected DateTime _birthDate;
-
-//    public Human(string fName, string lName ,DateTime date)
-//    {
-//        _firstName = fName;
-//        _lastName = lName;
-//        _birthDate = date;
-//    }
-
-//    public Human(string fName, string lName,string sName, DateTime date)
-//    {
-//        _firstName = fName;
-//        _lastName = lName;
-//        _secondName = sName;
-//        _birthDate = date;
-//    }
-
-//    //Form1 form1 = Application.OpenForms[0] as Form1;
-//    public string Show()
-//    {
-
-//        return $"\nФамилия: {_lastName} \nИмя: {_firstName} \nДата рождения: {_birthDate.ToShortDateString()}";
-//    }
-//}
-//class Student : Human
-//{
-//    string _institution;
-//    string _groupName;
-//    public Student(string fName, string lName, DateTime date, string institution, string gName) : base(fName, lName, date)
-//    {
-//        _institution = institution;
-//        _groupName = gName;
-//    }
-//    public string Show()
-//    {
-//        return $"Фамилия: {_lastName} \nИмя: {_firstName} \nДата рождения: {_birthDate.ToShortDateString()} \nУчусь в {_institution},группа {_groupName}\n\n";
-//    }
-
-//}

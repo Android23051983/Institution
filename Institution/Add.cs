@@ -51,6 +51,9 @@ namespace Institution
             label7.Text = "студенту";
             label10.Text = "учёбы";
             label11.Text = "учёбы";
+            this.InstitutionTextBox.Text = null;
+            this.InstitutionTextBox.ForeColor = System.Drawing.Color.Black;
+            this.InstitutionTextBox.ReadOnly = false;
         }
 
         private void radioButton4_CheckedChanged(object sender, EventArgs e)
@@ -72,6 +75,11 @@ namespace Institution
             label7.Text = "специалисту";
             label10.Text = "работы";
             label11.Text = "работы";
+            this.InstitutionTextBox.ReadOnly = true;
+            checkBox1.Enabled = false;
+            checkBox2.Enabled = false;
+            checkBox3.Enabled = false;
+            checkBox4.Enabled = false;
         }
 
         private void radioButton3_CheckedChanged(object sender, EventArgs e)
@@ -84,9 +92,9 @@ namespace Institution
 
         private void button1_Click(object sender, EventArgs e)
         {
-            //StudentsAdd.StudentAdd("Сергей", "Сизов", new DateTime(1989, 8, 2), "Академия ТОР", "СПУ221", "Разработка программного обеспечения");
+
             string? RadioText = "";
-           
+
             if (radioButton1.Checked)
             {
                 RadioText = radioButton1.Text;
@@ -121,7 +129,30 @@ namespace Institution
             {
                 CheckText = checkBox4.Text;
             }
-            StudentsAdd.StudentAdd(lNameTextBox.Text, fNameTextBox.Text, dateTimePicker1.Value, InstitutionTextBox.Text, CheckText, RadioText);
+
+            if (StudentRadioButton.Checked)
+            {
+                StudentsAdd.StudentAdd(lNameTextBox.Text, fNameTextBox.Text, dateTimePicker1.Value, dateTimePicker1.Value, InstitutionTextBox.Text, CheckText, RadioText);
+            }
+
+            if (SpecialistRadioButton.Checked)
+            {
+                SpecialistsAdd.SpecialistAdd(lNameTextBox.Text, fNameTextBox.Text, dateTimePicker1.Value, dateTimePicker2.Value, RadioText);
+                StatusWorkLabel.Text = "Специалист работает по настоящее время";
+            }
+
+        }
+
+        private void sNameTextBox_Click(object sender, EventArgs e)
+        {
+            sNameTextBox.Text = null;
+            sNameTextBox.ForeColor = Color.Black;
+        }
+
+        private void InstitutionTextBox_Click_1(object sender, EventArgs e)
+        {
+            InstitutionTextBox.Text = null;
+            InstitutionTextBox.ForeColor = Color.Black;
         }
     }
 }

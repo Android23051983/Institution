@@ -62,7 +62,12 @@
             dateTimePicker1 = new DateTimePicker();
             dateTimePicker2 = new DateTimePicker();
             panel1 = new Panel();
+            label14 = new Label();
+            dateTimePicker3 = new DateTimePicker();
+            panel2 = new Panel();
+            StatusWorkLabel = new Label();
             panel1.SuspendLayout();
+            panel2.SuspendLayout();
             SuspendLayout();
             // 
             // label1
@@ -126,16 +131,19 @@
             // InstitutionTextBox
             // 
             InstitutionTextBox.BorderStyle = BorderStyle.FixedSingle;
+            InstitutionTextBox.ForeColor = SystemColors.ScrollBar;
             InstitutionTextBox.Location = new Point(439, 45);
             InstitutionTextBox.Name = "InstitutionTextBox";
             InstitutionTextBox.Size = new Size(203, 23);
             InstitutionTextBox.TabIndex = 6;
+            InstitutionTextBox.Text = "Поле заполняется не всегда";
+            InstitutionTextBox.Click += InstitutionTextBox_Click_1;
             // 
             // checkBox1
             // 
             checkBox1.AutoSize = true;
             checkBox1.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
-            checkBox1.Location = new Point(51, 310);
+            checkBox1.Location = new Point(31, 333);
             checkBox1.Name = "checkBox1";
             checkBox1.Size = new Size(81, 24);
             checkBox1.TabIndex = 7;
@@ -146,7 +154,7 @@
             // 
             label5.AutoSize = true;
             label5.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
-            label5.Location = new Point(126, 287);
+            label5.Location = new Point(106, 310);
             label5.Name = "label5";
             label5.Size = new Size(126, 20);
             label5.TabIndex = 8;
@@ -156,7 +164,7 @@
             // 
             checkBox2.AutoSize = true;
             checkBox2.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
-            checkBox2.Location = new Point(51, 335);
+            checkBox2.Location = new Point(31, 358);
             checkBox2.Name = "checkBox2";
             checkBox2.Size = new Size(81, 24);
             checkBox2.TabIndex = 9;
@@ -168,7 +176,7 @@
             // 
             checkBox3.AutoSize = true;
             checkBox3.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
-            checkBox3.Location = new Point(235, 310);
+            checkBox3.Location = new Point(215, 333);
             checkBox3.Name = "checkBox3";
             checkBox3.Size = new Size(81, 24);
             checkBox3.TabIndex = 10;
@@ -179,7 +187,7 @@
             // 
             checkBox4.AutoSize = true;
             checkBox4.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
-            checkBox4.Location = new Point(235, 335);
+            checkBox4.Location = new Point(215, 358);
             checkBox4.Name = "checkBox4";
             checkBox4.Size = new Size(81, 24);
             checkBox4.TabIndex = 11;
@@ -263,7 +271,7 @@
             label8.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             label8.AutoSize = true;
             label8.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
-            label8.Location = new Point(12, 81);
+            label8.Location = new Point(3, 10);
             label8.Name = "label8";
             label8.Size = new Size(94, 20);
             label8.TabIndex = 18;
@@ -274,7 +282,7 @@
             label9.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             label9.AutoSize = true;
             label9.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
-            label9.Location = new Point(12, 137);
+            label9.Location = new Point(3, 63);
             label9.Name = "label9";
             label9.Size = new Size(121, 20);
             label9.TabIndex = 20;
@@ -285,7 +293,7 @@
             label10.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             label10.AutoSize = true;
             label10.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
-            label10.Location = new Point(106, 81);
+            label10.Location = new Point(97, 10);
             label10.Name = "label10";
             label10.Size = new Size(0, 20);
             label10.TabIndex = 22;
@@ -295,7 +303,7 @@
             label11.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             label11.AutoSize = true;
             label11.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
-            label11.Location = new Point(133, 136);
+            label11.Location = new Point(123, 63);
             label11.Name = "label11";
             label11.Size = new Size(0, 20);
             label11.TabIndex = 23;
@@ -329,6 +337,7 @@
             sNameTextBox.Size = new Size(155, 23);
             sNameTextBox.TabIndex = 27;
             sNameTextBox.Text = "Заполнять необязательно";
+            sNameTextBox.Click += sNameTextBox_Click;
             // 
             // label12
             // 
@@ -344,7 +353,7 @@
             // 
             label13.AutoSize = true;
             label13.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
-            label13.Location = new Point(470, 287);
+            label13.Location = new Point(465, 310);
             label13.Name = "label13";
             label13.Size = new Size(119, 20);
             label13.TabIndex = 28;
@@ -354,7 +363,7 @@
             // 
             radioButton1.AutoSize = true;
             radioButton1.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
-            radioButton1.Location = new Point(394, 310);
+            radioButton1.Location = new Point(389, 333);
             radioButton1.Name = "radioButton1";
             radioButton1.Size = new Size(264, 24);
             radioButton1.TabIndex = 29;
@@ -366,7 +375,7 @@
             // 
             radioButton2.AutoSize = true;
             radioButton2.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
-            radioButton2.Location = new Point(394, 335);
+            radioButton2.Location = new Point(389, 358);
             radioButton2.Name = "radioButton2";
             radioButton2.Size = new Size(315, 24);
             radioButton2.TabIndex = 30;
@@ -378,7 +387,7 @@
             // 
             radioButton3.AutoSize = true;
             radioButton3.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
-            radioButton3.Location = new Point(394, 360);
+            radioButton3.Location = new Point(389, 383);
             radioButton3.Name = "radioButton3";
             radioButton3.Size = new Size(216, 24);
             radioButton3.TabIndex = 31;
@@ -390,7 +399,7 @@
             // 
             radioButton4.AutoSize = true;
             radioButton4.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
-            radioButton4.Location = new Point(394, 385);
+            radioButton4.Location = new Point(389, 408);
             radioButton4.Name = "radioButton4";
             radioButton4.Size = new Size(208, 24);
             radioButton4.TabIndex = 32;
@@ -407,7 +416,7 @@
             // 
             // dateTimePicker2
             // 
-            dateTimePicker2.Location = new Point(12, 160);
+            dateTimePicker2.Location = new Point(3, 33);
             dateTimePicker2.Name = "dateTimePicker2";
             dateTimePicker2.Size = new Size(200, 23);
             dateTimePicker2.TabIndex = 36;
@@ -423,14 +432,55 @@
             panel1.Size = new Size(349, 82);
             panel1.TabIndex = 37;
             // 
+            // label14
+            // 
+            label14.AutoSize = true;
+            label14.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
+            label14.Location = new Point(12, 81);
+            label14.Name = "label14";
+            label14.Size = new Size(116, 20);
+            label14.TabIndex = 38;
+            label14.Text = "Дата рождения";
+            // 
+            // dateTimePicker3
+            // 
+            dateTimePicker3.Location = new Point(3, 86);
+            dateTimePicker3.Name = "dateTimePicker3";
+            dateTimePicker3.Size = new Size(200, 23);
+            dateTimePicker3.TabIndex = 39;
+            // 
+            // panel2
+            // 
+            panel2.BorderStyle = BorderStyle.Fixed3D;
+            panel2.Controls.Add(StatusWorkLabel);
+            panel2.Controls.Add(dateTimePicker3);
+            panel2.Controls.Add(label8);
+            panel2.Controls.Add(label9);
+            panel2.Controls.Add(dateTimePicker2);
+            panel2.Controls.Add(label10);
+            panel2.Controls.Add(label11);
+            panel2.Location = new Point(12, 133);
+            panel2.Name = "panel2";
+            panel2.Size = new Size(208, 174);
+            panel2.TabIndex = 40;
+            // 
+            // StatusWorkLabel
+            // 
+            StatusWorkLabel.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            StatusWorkLabel.Location = new Point(3, 112);
+            StatusWorkLabel.Name = "StatusWorkLabel";
+            StatusWorkLabel.Size = new Size(198, 58);
+            StatusWorkLabel.TabIndex = 41;
+            // 
             // Add
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.AppWorkspace;
             ClientSize = new Size(769, 499);
+            Controls.Add(panel2);
+            Controls.Add(label14);
             Controls.Add(panel1);
-            Controls.Add(dateTimePicker2);
             Controls.Add(dateTimePicker1);
             Controls.Add(radioButton4);
             Controls.Add(radioButton3);
@@ -441,10 +491,6 @@
             Controls.Add(label12);
             Controls.Add(button2);
             Controls.Add(button1);
-            Controls.Add(label11);
-            Controls.Add(label10);
-            Controls.Add(label9);
-            Controls.Add(label8);
             Controls.Add(label7);
             Controls.Add(label6);
             Controls.Add(checkBox4);
@@ -459,7 +505,7 @@
             Controls.Add(label2);
             Controls.Add(fNameTextBox);
             Controls.Add(label1);
-            FormBorderStyle = FormBorderStyle.Fixed3D;
+            FormBorderStyle = FormBorderStyle.FixedDialog;
             MaximizeBox = false;
             MinimizeBox = false;
             Name = "Add";
@@ -468,6 +514,8 @@
             Load += Add_Load;
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
+            panel2.ResumeLayout(false);
+            panel2.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -508,5 +556,9 @@
         private DateTimePicker dateTimePicker1;
         private DateTimePicker dateTimePicker2;
         private Panel panel1;
+        private Label label14;
+        private DateTimePicker dateTimePicker3;
+        private Panel panel2;
+        private Label StatusWorkLabel;
     }
 }

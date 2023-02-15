@@ -12,6 +12,17 @@ namespace Institution
         protected string _institution { get; set; }
         protected string _groupName { get; set; }
         protected string _specialization { get; set; }
+        public Student(string fName, string lName, DateTime date, string institution, string specialization):base(fName,lName, date)
+        { 
+            _institution = institution;
+            _specialization = specialization;
+        } 
+         public Student(string fName, string lName, string sName, DateTime date, string institution, string specialization):base(fName,lName, sName, date)
+        { 
+            _institution = institution;
+            _specialization = specialization;
+        } 
+
         public Student(string fName, string lName, DateTime date, DateTime startStudy, string institution, string gName, string specialization) : base(fName, lName, date)
         {
             _startStudy = startStudy;

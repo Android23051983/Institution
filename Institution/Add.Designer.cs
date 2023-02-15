@@ -134,7 +134,7 @@
             InstitutionTextBox.ForeColor = SystemColors.ScrollBar;
             InstitutionTextBox.Location = new Point(439, 45);
             InstitutionTextBox.Name = "InstitutionTextBox";
-            InstitutionTextBox.Size = new Size(203, 23);
+            InstitutionTextBox.Size = new Size(262, 23);
             InstitutionTextBox.TabIndex = 6;
             InstitutionTextBox.Text = "Поле заполняется не всегда";
             InstitutionTextBox.Click += InstitutionTextBox_Click_1;
@@ -199,7 +199,7 @@
             label6.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             label6.AutoSize = true;
             label6.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
-            label6.Location = new Point(445, 81);
+            label6.Location = new Point(412, 86);
             label6.Name = "label6";
             label6.Size = new Size(197, 20);
             label6.TabIndex = 12;
@@ -209,7 +209,7 @@
             // 
             label7.AutoSize = true;
             label7.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
-            label7.Location = new Point(445, 105);
+            label7.Location = new Point(412, 110);
             label7.Name = "label7";
             label7.Size = new Size(0, 20);
             label7.TabIndex = 13;
@@ -427,7 +427,7 @@
             panel1.Controls.Add(StudentRadioButton);
             panel1.Controls.Add(SpecialistRadioButton);
             panel1.Controls.Add(TeacherRadioButton);
-            panel1.Location = new Point(360, 128);
+            panel1.Location = new Point(327, 133);
             panel1.Name = "panel1";
             panel1.Size = new Size(349, 82);
             panel1.TabIndex = 37;
@@ -477,7 +477,7 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.AppWorkspace;
-            ClientSize = new Size(769, 499);
+            ClientSize = new Size(719, 499);
             Controls.Add(panel2);
             Controls.Add(label14);
             Controls.Add(panel1);

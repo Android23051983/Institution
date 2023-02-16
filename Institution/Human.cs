@@ -11,7 +11,7 @@ namespace Institution
 
         protected string _firstName { get; set; }
         protected string _lastName { get; set; }
-        protected string _secondName { get; set; }
+        protected readonly string _secondName;
         protected DateTime _birthDate { get; set; }
 
         public Human(string fName, string lName, DateTime date)

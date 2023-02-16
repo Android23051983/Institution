@@ -10,12 +10,12 @@ namespace Institution
     {
         internal static Specialist[] specialists = {
            new Specialist("Иван", "Щербаков",
-           new DateTime(1983, 5, 23),new DateTime(2000, 3, 1), "программист","5"),
+           new DateTime(1983, 5, 23), new DateTime(2000, 3, 1), "Программист",11000, "5"),
            new Specialist("Василий", "Комиссаров",
-           new DateTime(1993, 7, 12), new DateTime(2003, 5, 1), "Программист","3")
+           new DateTime(1993, 7, 12), new DateTime(2003, 5, 1), "Программист",11000,"3")
         };
 
-        public SpecialistsAdd(string fName, string lName, DateTime date, DateTime stariWork, string qualification, string experience) : base(fName, lName, date, stariWork,qualification, experience)
+        public SpecialistsAdd(string fName, string lName, DateTime date, DateTime stariWork, string qualification, int salary, string experience) : base(fName, lName, date, stariWork,qualification, salary, experience)
         {
             
         }

@@ -8,9 +8,13 @@ namespace Institution
 {
     internal class JuniorResearchAssistant:Specialist
     {
-        public JuniorResearchAssistant(string fName, string lName, DateTime date, DateTime startWork, string qualification) : base(fName, lName, date, startWork, qualification)
-        { 
-        
+
+        protected string _scientificWork { set; get; }
+        protected string _scientificSupervisor { set; get; }
+        public JuniorResearchAssistant(string fName, string lName, DateTime date, DateTime startWork, string qualification, string scientificWork, string scientificSupervisor) : base(fName, lName, date, startWork, qualification)
+        {
+            _scientificWork = scientificWork;
+            _scientificSupervisor = scientificSupervisor;
         }
 
         public override string ToString()

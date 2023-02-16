@@ -9,10 +9,10 @@ namespace Institution
     internal class Human
     {
 
-        protected string _firstName { get; set; }
-        protected string _lastName { get; set; }
+        protected string _firstName { get; init; } = default;
+        protected string _lastName { get; init; } = default;
         protected readonly string _secondName;
-        protected DateTime _birthDate { get; set; }
+        protected DateTime _birthDate { get; init; }
 
         public Human(string fName, string lName, DateTime date)
         {
@@ -31,7 +31,6 @@ namespace Institution
         }
         public Human() { }
 
-        //Form1 form1 = Application.OpenForms[0] as Form1;
         public override string ToString()
         {
 

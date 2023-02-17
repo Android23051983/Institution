@@ -37,6 +37,7 @@ namespace Institution
             sb.Append("\n");
             sb.Append("Имя: "); sb.Append(_firstName); sb.Append("\n");
             sb.Append("Фамилия: "); sb.Append(_lastName); sb.Append("\n");
+            sb.Append("Отчество: "); sb.Append(_secondName); sb.Append("\n");
             sb.Append("Дата рождения: "); sb.Append(_birthDate.ToShortDateString()); sb.Append("\n");
             sb.Append("Преподаю в: "); sb.Append(_institution); sb.Append("\n");
             sb.Append("Преподаю в группе(группах):\n");

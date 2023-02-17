@@ -143,7 +143,7 @@
             // radioButton3
             // 
             radioButton3.AutoSize = true;
-            radioButton3.Location = new Point(246, 122);
+            radioButton3.Location = new Point(246, 97);
             radioButton3.Name = "radioButton3";
             radioButton3.Size = new Size(109, 19);
             radioButton3.TabIndex = 21;
@@ -165,7 +165,7 @@
             // radioButton2
             // 
             radioButton2.AutoSize = true;
-            radioButton2.Location = new Point(246, 97);
+            radioButton2.Location = new Point(246, 122);
             radioButton2.Name = "radioButton2";
             radioButton2.Size = new Size(91, 19);
             radioButton2.TabIndex = 19;

@@ -42,7 +42,7 @@ namespace Institution
             else if (this.radioButton3.Checked)
             {
                 this.richTextBox2.Clear();
-                for(int i=0; i<TeachersAdd.teachers.Length; i++)
+                for (int i = 0; i < TeachersAdd.teachers.Length; i++)
                 {
                     this.richTextBox2.Text += TeachersAdd.teachers[i];
                 }

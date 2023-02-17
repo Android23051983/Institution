@@ -120,7 +120,7 @@ namespace Institution
 
         public override string ToString()
         {
-            return $"{base.ToString()}\nКвалификация: {_qualification}\nОпыт работы(Стаж): {_experience}\n";
+            return $"{base.ToString()}\nКвалификация: {_qualification}\nОпыт работы(Стаж): {_experience} года(лет)\n";
         }
     }
 }

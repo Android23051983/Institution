@@ -172,6 +172,7 @@
             radioButton2.TabStop = true;
             radioButton2.Text = "Специалист";
             radioButton2.UseVisualStyleBackColor = true;
+            radioButton2.CheckedChanged += radioButton2_CheckedChanged;
             // 
             // radioButton1
             // 

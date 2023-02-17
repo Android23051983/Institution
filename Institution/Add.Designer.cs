@@ -66,6 +66,11 @@
             dateTimePicker3 = new DateTimePicker();
             panel2 = new Panel();
             StatusWorkLabel = new Label();
+            label15 = new Label();
+            label16 = new Label();
+            textBox1 = new TextBox();
+            textBox2 = new TextBox();
+            label17 = new Label();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
             SuspendLayout();
@@ -143,7 +148,7 @@
             // 
             checkBox1.AutoSize = true;
             checkBox1.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
-            checkBox1.Location = new Point(31, 333);
+            checkBox1.Location = new Point(242, 104);
             checkBox1.Name = "checkBox1";
             checkBox1.Size = new Size(81, 24);
             checkBox1.TabIndex = 7;
@@ -154,17 +159,18 @@
             // 
             label5.AutoSize = true;
             label5.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
-            label5.Location = new Point(106, 310);
+            label5.Location = new Point(282, 81);
             label5.Name = "label5";
             label5.Size = new Size(126, 20);
             label5.TabIndex = 8;
             label5.Text = "Учебные группы";
+            label5.Click += label5_Click;
             // 
             // checkBox2
             // 
             checkBox2.AutoSize = true;
             checkBox2.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
-            checkBox2.Location = new Point(31, 358);
+            checkBox2.Location = new Point(242, 129);
             checkBox2.Name = "checkBox2";
             checkBox2.Size = new Size(81, 24);
             checkBox2.TabIndex = 9;
@@ -176,7 +182,7 @@
             // 
             checkBox3.AutoSize = true;
             checkBox3.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
-            checkBox3.Location = new Point(215, 333);
+            checkBox3.Location = new Point(341, 105);
             checkBox3.Name = "checkBox3";
             checkBox3.Size = new Size(81, 24);
             checkBox3.TabIndex = 10;
@@ -187,7 +193,7 @@
             // 
             checkBox4.AutoSize = true;
             checkBox4.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
-            checkBox4.Location = new Point(215, 358);
+            checkBox4.Location = new Point(341, 130);
             checkBox4.Name = "checkBox4";
             checkBox4.Size = new Size(81, 24);
             checkBox4.TabIndex = 11;
@@ -199,7 +205,7 @@
             label6.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             label6.AutoSize = true;
             label6.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
-            label6.Location = new Point(412, 86);
+            label6.Location = new Point(196, 314);
             label6.Name = "label6";
             label6.Size = new Size(197, 20);
             label6.TabIndex = 12;
@@ -209,7 +215,7 @@
             // 
             label7.AutoSize = true;
             label7.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
-            label7.Location = new Point(412, 110);
+            label7.Location = new Point(393, 314);
             label7.Name = "label7";
             label7.Size = new Size(0, 20);
             label7.TabIndex = 13;
@@ -218,7 +224,7 @@
             // 
             StudentRadioButton.AutoSize = true;
             StudentRadioButton.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
-            StudentRadioButton.Location = new Point(3, 0);
+            StudentRadioButton.Location = new Point(5, 0);
             StudentRadioButton.Name = "StudentRadioButton";
             StudentRadioButton.Size = new Size(80, 24);
             StudentRadioButton.TabIndex = 14;
@@ -231,7 +237,7 @@
             // 
             SpecialistRadioButton.AutoSize = true;
             SpecialistRadioButton.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
-            SpecialistRadioButton.Location = new Point(3, 58);
+            SpecialistRadioButton.Location = new Point(287, 3);
             SpecialistRadioButton.Name = "SpecialistRadioButton";
             SpecialistRadioButton.Size = new Size(109, 24);
             SpecialistRadioButton.TabIndex = 15;
@@ -244,7 +250,7 @@
             // 
             JuniorAssistantRadioButton.AutoSize = true;
             JuniorAssistantRadioButton.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
-            JuniorAssistantRadioButton.Location = new Point(118, 0);
+            JuniorAssistantRadioButton.Location = new Point(425, 3);
             JuniorAssistantRadioButton.Name = "JuniorAssistantRadioButton";
             JuniorAssistantRadioButton.Size = new Size(234, 24);
             JuniorAssistantRadioButton.TabIndex = 16;
@@ -257,7 +263,7 @@
             // 
             TeacherRadioButton.AutoSize = true;
             TeacherRadioButton.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
-            TeacherRadioButton.Location = new Point(118, 58);
+            TeacherRadioButton.Location = new Point(114, 3);
             TeacherRadioButton.Name = "TeacherRadioButton";
             TeacherRadioButton.Size = new Size(135, 24);
             TeacherRadioButton.TabIndex = 17;
@@ -310,7 +316,7 @@
             // 
             // button1
             // 
-            button1.Location = new Point(126, 464);
+            button1.Location = new Point(196, 410);
             button1.Name = "button1";
             button1.Size = new Size(81, 23);
             button1.TabIndex = 24;
@@ -320,7 +326,7 @@
             // 
             // button2
             // 
-            button2.Location = new Point(235, 464);
+            button2.Location = new Point(305, 410);
             button2.Name = "button2";
             button2.Size = new Size(157, 23);
             button2.TabIndex = 25;
@@ -353,7 +359,7 @@
             // 
             label13.AutoSize = true;
             label13.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
-            label13.Location = new Point(465, 310);
+            label13.Location = new Point(502, 81);
             label13.Name = "label13";
             label13.Size = new Size(119, 20);
             label13.TabIndex = 28;
@@ -363,7 +369,7 @@
             // 
             radioButton1.AutoSize = true;
             radioButton1.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
-            radioButton1.Location = new Point(389, 333);
+            radioButton1.Location = new Point(426, 104);
             radioButton1.Name = "radioButton1";
             radioButton1.Size = new Size(264, 24);
             radioButton1.TabIndex = 29;
@@ -375,7 +381,7 @@
             // 
             radioButton2.AutoSize = true;
             radioButton2.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
-            radioButton2.Location = new Point(389, 358);
+            radioButton2.Location = new Point(426, 129);
             radioButton2.Name = "radioButton2";
             radioButton2.Size = new Size(315, 24);
             radioButton2.TabIndex = 30;
@@ -387,7 +393,7 @@
             // 
             radioButton3.AutoSize = true;
             radioButton3.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
-            radioButton3.Location = new Point(389, 383);
+            radioButton3.Location = new Point(426, 154);
             radioButton3.Name = "radioButton3";
             radioButton3.Size = new Size(216, 24);
             radioButton3.TabIndex = 31;
@@ -399,7 +405,7 @@
             // 
             radioButton4.AutoSize = true;
             radioButton4.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
-            radioButton4.Location = new Point(389, 408);
+            radioButton4.Location = new Point(426, 179);
             radioButton4.Name = "radioButton4";
             radioButton4.Size = new Size(208, 24);
             radioButton4.TabIndex = 32;
@@ -427,9 +433,9 @@
             panel1.Controls.Add(StudentRadioButton);
             panel1.Controls.Add(SpecialistRadioButton);
             panel1.Controls.Add(TeacherRadioButton);
-            panel1.Location = new Point(327, 133);
+            panel1.Location = new Point(12, 347);
             panel1.Name = "panel1";
-            panel1.Size = new Size(349, 82);
+            panel1.Size = new Size(723, 46);
             panel1.TabIndex = 37;
             // 
             // label14
@@ -472,12 +478,61 @@
             StatusWorkLabel.Size = new Size(198, 58);
             StatusWorkLabel.TabIndex = 41;
             // 
+            // label15
+            // 
+            label15.AutoSize = true;
+            label15.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
+            label15.Location = new Point(282, 250);
+            label15.Name = "label15";
+            label15.Size = new Size(121, 20);
+            label15.TabIndex = 41;
+            label15.Text = "Научная работа";
+            // 
+            // label16
+            // 
+            label16.AutoSize = true;
+            label16.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
+            label16.Location = new Point(437, 250);
+            label16.Name = "label16";
+            label16.Size = new Size(172, 20);
+            label16.TabIndex = 42;
+            label16.Text = "Научный руководитель";
+            // 
+            // textBox1
+            // 
+            textBox1.Location = new Point(282, 273);
+            textBox1.Name = "textBox1";
+            textBox1.Size = new Size(121, 23);
+            textBox1.TabIndex = 43;
+            // 
+            // textBox2
+            // 
+            textBox2.Location = new Point(437, 273);
+            textBox2.Name = "textBox2";
+            textBox2.Size = new Size(172, 23);
+            textBox2.TabIndex = 44;
+            // 
+            // label17
+            // 
+            label17.AutoSize = true;
+            label17.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
+            label17.Location = new Point(367, 221);
+            label17.Name = "label17";
+            label17.Size = new Size(121, 20);
+            label17.TabIndex = 45;
+            label17.Text = "Научная работа";
+            // 
             // Add
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.AppWorkspace;
-            ClientSize = new Size(719, 499);
+            ClientSize = new Size(747, 445);
+            Controls.Add(label17);
+            Controls.Add(textBox2);
+            Controls.Add(textBox1);
+            Controls.Add(label16);
+            Controls.Add(label15);
             Controls.Add(panel2);
             Controls.Add(label14);
             Controls.Add(panel1);
@@ -560,5 +615,10 @@
         private DateTimePicker dateTimePicker3;
         private Panel panel2;
         private Label StatusWorkLabel;
+        private Label label15;
+        private Label label16;
+        private TextBox textBox1;
+        private TextBox textBox2;
+        private Label label17;
     }
 }

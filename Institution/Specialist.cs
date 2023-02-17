@@ -14,14 +14,14 @@ namespace Institution
         private readonly int _minimalSalary = 16242 ;
         protected int _salary { get; set; }
 
-        public Specialist(string fName, string lName, DateTime date, DateTime startWork, string qualification, int salary, string experience) :base(fName, lName, date)
+        public Specialist(string fName, string lName, DateTime date, string qualification, int salary, string experience, DateTime startWork) :base(fName, lName, date)
         {
            
             _qualification = qualification;
             _experience = experience;
             _salary = salary;
         } 
-        public Specialist(string fName, string lName, string sName, DateTime date, DateTime startWork, string qualification) :base(fName, lName, sName, date)
+        public Specialist(string fName, string lName, string sName, DateTime date, string qualification, DateTime startWork) :base(fName, lName, sName, date)
         {
             //switch (specialization)
             //{
@@ -45,7 +45,7 @@ namespace Institution
             _experience = string.Format("{0} лет / {1} месяцев / {2} дней/", (differenceDateTime.Year - 1), (differenceDateTime.Month - 1), (differenceDateTime.Day - 1));
 
         }
-        public Specialist(string fName, string lName, DateTime date, DateTime startWork, DateTime finishWork, string qualification) : base(fName, lName, date)
+        public Specialist(string fName, string lName, DateTime date, string qualification, DateTime startWork, DateTime finishWork) : base(fName, lName, date)
         {
         //    switch (specialization)
         //    {
@@ -68,7 +68,7 @@ namespace Institution
             _experience = string.Format("{0} лет / {1} месяцев / {2} дней/", (differenceDateTime.Year - 1), (differenceDateTime.Month - 1), (differenceDateTime.Day - 1));
 
         }
-        public Specialist(string fName, string lName, string sName, DateTime date, DateTime startWork, DateTime finishWork, string qualification) :base(fName, sName, lName, date)
+        public Specialist(string fName, string lName, string sName, DateTime date, string qualification, DateTime startWork, DateTime finishWork) :base(fName, sName, lName, date)
         {
             /*switch (specialization)
             {

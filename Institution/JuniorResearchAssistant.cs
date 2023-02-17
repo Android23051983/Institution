@@ -11,7 +11,7 @@ namespace Institution
 
         protected string _scientificWork { set; get; }
         protected string _scientificSupervisor { set; get; }
-        public JuniorResearchAssistant(string fName, string lName, DateTime date, DateTime startWork, string qualification, string scientificWork, string scientificSupervisor) : base(fName, lName, date, startWork, qualification)
+        public JuniorResearchAssistant(string fName, string lName, DateTime date, string qualification, int salary, string scientificWork, string scientificSupervisor, string experience, DateTime startWork) : base(fName, lName, date, qualification, salary, experience, startWork)
         {
             _scientificWork = scientificWork;
             _scientificSupervisor = scientificSupervisor;
@@ -20,7 +20,7 @@ namespace Institution
         public override string ToString()
         {
 
-            return $"{base.ToString()}\n";
+            return $"{base.ToString()}Научная работа: {_scientificWork}\nНаучный руководитель: {_scientificSupervisor}\n";
         }
     }
 }

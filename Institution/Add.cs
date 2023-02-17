@@ -154,5 +154,10 @@ namespace Institution
             InstitutionTextBox.Text = null;
             InstitutionTextBox.ForeColor = Color.Black;
         }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

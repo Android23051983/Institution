@@ -65,14 +65,19 @@
             label14 = new Label();
             dateTimePicker3 = new DateTimePicker();
             panel2 = new Panel();
+            ExperienceTextBox = new TextBox();
+            ExperienceLabel = new Label();
             StatusWorkLabel = new Label();
             label15 = new Label();
             label16 = new Label();
             textBox1 = new TextBox();
             textBox2 = new TextBox();
             label17 = new Label();
+            SalaryLabel = new Label();
+            SalaryNumericUpDown1 = new NumericUpDown();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)SalaryNumericUpDown1).BeginInit();
             SuspendLayout();
             // 
             // label1
@@ -148,7 +153,7 @@
             // 
             checkBox1.AutoSize = true;
             checkBox1.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
-            checkBox1.Location = new Point(242, 104);
+            checkBox1.Location = new Point(227, 168);
             checkBox1.Name = "checkBox1";
             checkBox1.Size = new Size(81, 24);
             checkBox1.TabIndex = 7;
@@ -159,7 +164,7 @@
             // 
             label5.AutoSize = true;
             label5.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
-            label5.Location = new Point(282, 81);
+            label5.Location = new Point(267, 145);
             label5.Name = "label5";
             label5.Size = new Size(126, 20);
             label5.TabIndex = 8;
@@ -170,7 +175,7 @@
             // 
             checkBox2.AutoSize = true;
             checkBox2.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
-            checkBox2.Location = new Point(242, 129);
+            checkBox2.Location = new Point(227, 193);
             checkBox2.Name = "checkBox2";
             checkBox2.Size = new Size(81, 24);
             checkBox2.TabIndex = 9;
@@ -182,7 +187,7 @@
             // 
             checkBox3.AutoSize = true;
             checkBox3.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
-            checkBox3.Location = new Point(341, 105);
+            checkBox3.Location = new Point(326, 169);
             checkBox3.Name = "checkBox3";
             checkBox3.Size = new Size(81, 24);
             checkBox3.TabIndex = 10;
@@ -193,7 +198,7 @@
             // 
             checkBox4.AutoSize = true;
             checkBox4.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
-            checkBox4.Location = new Point(341, 130);
+            checkBox4.Location = new Point(326, 194);
             checkBox4.Name = "checkBox4";
             checkBox4.Size = new Size(81, 24);
             checkBox4.TabIndex = 11;
@@ -224,7 +229,7 @@
             // 
             StudentRadioButton.AutoSize = true;
             StudentRadioButton.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
-            StudentRadioButton.Location = new Point(5, 0);
+            StudentRadioButton.Location = new Point(5, 3);
             StudentRadioButton.Name = "StudentRadioButton";
             StudentRadioButton.Size = new Size(80, 24);
             StudentRadioButton.TabIndex = 14;
@@ -458,6 +463,8 @@
             // panel2
             // 
             panel2.BorderStyle = BorderStyle.Fixed3D;
+            panel2.Controls.Add(ExperienceTextBox);
+            panel2.Controls.Add(ExperienceLabel);
             panel2.Controls.Add(StatusWorkLabel);
             panel2.Controls.Add(dateTimePicker3);
             panel2.Controls.Add(label8);
@@ -469,6 +476,23 @@
             panel2.Name = "panel2";
             panel2.Size = new Size(208, 174);
             panel2.TabIndex = 40;
+            // 
+            // ExperienceTextBox
+            // 
+            ExperienceTextBox.Location = new Point(3, 138);
+            ExperienceTextBox.Name = "ExperienceTextBox";
+            ExperienceTextBox.Size = new Size(198, 23);
+            ExperienceTextBox.TabIndex = 48;
+            // 
+            // ExperienceLabel
+            // 
+            ExperienceLabel.AutoSize = true;
+            ExperienceLabel.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
+            ExperienceLabel.Location = new Point(3, 115);
+            ExperienceLabel.Name = "ExperienceLabel";
+            ExperienceLabel.Size = new Size(102, 20);
+            ExperienceLabel.TabIndex = 48;
+            ExperienceLabel.Text = "Опыт работы";
             // 
             // StatusWorkLabel
             // 
@@ -522,12 +546,31 @@
             label17.TabIndex = 45;
             label17.Text = "Научная работа";
             // 
+            // SalaryLabel
+            // 
+            SalaryLabel.AutoSize = true;
+            SalaryLabel.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
+            SalaryLabel.Location = new Point(282, 85);
+            SalaryLabel.Name = "SalaryLabel";
+            SalaryLabel.Size = new Size(83, 20);
+            SalaryLabel.TabIndex = 46;
+            SalaryLabel.Text = "Степендия";
+            // 
+            // SalaryNumericUpDown1
+            // 
+            SalaryNumericUpDown1.Location = new Point(267, 108);
+            SalaryNumericUpDown1.Name = "SalaryNumericUpDown1";
+            SalaryNumericUpDown1.Size = new Size(120, 23);
+            SalaryNumericUpDown1.TabIndex = 47;
+            // 
             // Add
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.AppWorkspace;
             ClientSize = new Size(747, 445);
+            Controls.Add(SalaryNumericUpDown1);
+            Controls.Add(SalaryLabel);
             Controls.Add(label17);
             Controls.Add(textBox2);
             Controls.Add(textBox1);
@@ -571,6 +614,7 @@
             panel1.PerformLayout();
             panel2.ResumeLayout(false);
             panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)SalaryNumericUpDown1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -620,5 +664,9 @@
         private TextBox textBox1;
         private TextBox textBox2;
         private Label label17;
+        private Label SalaryLabel;
+        private TextBox ExperienceTextBox;
+        private Label ExperienceLabel;
+        private NumericUpDown SalaryNumericUpDown1;
     }
 }

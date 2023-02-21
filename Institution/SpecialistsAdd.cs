@@ -15,7 +15,7 @@ namespace Institution
            new DateTime(1993, 7, 12), "Программист",11000,"3", new DateTime(2003, 5, 1))
         };
 
-        public SpecialistsAdd(string fName, string lName, DateTime date, string qualification, int salary, string experience, DateTime stariWork) : base(fName, lName, date,qualification, salary, experience, stariWork)
+        public SpecialistsAdd(string fName, string lName, DateTime date, string qualification, decimal salary, string experience, DateTime stariWork) : base(fName, lName, date,qualification, salary, experience, stariWork)
         {
             
         }
@@ -31,6 +31,19 @@ namespace Institution
                 specialistAdd[i] = specialists[i];
             //studentAdd[studentAdd.Length-1] = new Student("Сергей", "Сизов", new DateTime(1989, 8, 2), "Академия ТОР", "СПУ221", "Разработка программного обеспечения");
             specialistAdd[specialistAdd.Length - 1] = new Specialist(fName, lName, date, startWork, qualification);
+            specialists = new Specialist[specialistAdd.Length - 1];
+            specialists = specialistAdd;
+            return specialists;
+        }
+         public static Specialist[] SpecialistAdd(string fName, string lName, DateTime date, string qualification, decimal salary, string experience, DateTime startWork)
+        {
+            Specialist[] specialistAdd = new Specialist[specialists.Length + 1];
+            for (int i = 0; i < specialistAdd.Length - 1; i++)
+                specialistAdd[i] = specialists[i];
+            //studentAdd[studentAdd.Length-1] = new Student("Сергей", "Сизов", new DateTime(1989, 8, 2), "Академия ТОР", "СПУ221", "Разработка программного обеспечения");
+
+            specialistAdd[specialistAdd.Length - 1] = new Specialist(fName, lName, date, qualification, salary, experience, startWork);
+            
             specialists = new Specialist[specialistAdd.Length - 1];
             specialists = specialistAdd;
             return specialists;

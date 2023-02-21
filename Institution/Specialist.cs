@@ -12,9 +12,20 @@ namespace Institution
         protected string _qualification { get; set; }
         protected string _experience { get; set; }
         private readonly int _minimalSalary = 16242 ;
-        protected int _salary { get; set; }
+        protected decimal _salary
+        {
+            get { return _salary; }
+            
+            set
+            {
+                if (value < 16000)
+                    throw new Exception("Зарплата не должна быть меньше 16000");
+                else
+                    _salary = value;
+            }
+        }
 
-        public Specialist(string fName, string lName, DateTime date, string qualification, int salary, string experience, DateTime startWork) :base(fName, lName, date)
+        public Specialist(string fName, string lName, DateTime date, string qualification, decimal salary, string experience, DateTime startWork) :base(fName, lName, date)
         {
            
             _qualification = qualification;

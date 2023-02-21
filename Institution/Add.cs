@@ -132,13 +132,24 @@ namespace Institution
 
             if (StudentRadioButton.Checked)
             {
+
                 StudentsAdd.StudentAdd(lNameTextBox.Text, fNameTextBox.Text, dateTimePicker1.Value, dateTimePicker1.Value, InstitutionTextBox.Text, CheckText, RadioText);
+
             }
 
             if (SpecialistRadioButton.Checked)
             {
-                SpecialistsAdd.SpecialistAdd(lNameTextBox.Text, fNameTextBox.Text, dateTimePicker1.Value, dateTimePicker2.Value, RadioText);
-                StatusWorkLabel.Text = "Специалист работает по настоящее время";
+                if (SalaryNumericUpDown1.Value == 0)
+                {
+                    SpecialistsAdd.SpecialistAdd(lNameTextBox.Text, fNameTextBox.Text, dateTimePicker1.Value, dateTimePicker2.Value, RadioText);
+                    StatusWorkLabel.Text = "Специалист работает по настоящее время";
+                }
+                else if (SalaryNumericUpDown1.Value > 0)
+                {
+
+                    SpecialistsAdd.SpecialistAdd(lNameTextBox.Text, fNameTextBox.Text, dateTimePicker1.Value, RadioText, SalaryNumericUpDown1.Value, ExperienceTextBox.Text, dateTimePicker2.Value);
+                    
+                }
             }
 
         }
@@ -159,5 +170,7 @@ namespace Institution
         {
 
         }
+
+        
     }
 }
